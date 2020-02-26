@@ -1,0 +1,50 @@
+import random #made by MarkOR7
+name = input("Имя вашего нового героя ? \n")
+age = int(input("Возраст вашего нового персонажа \n"))
+print('Ваше новое имя:',  name ,'Ваш новый возраст :', age)
+def sleep():
+    print('Вы решили не идти а поспать')
+def go():
+    if rear == 1:
+        print("*вас испугали* \n ААА!!! очень страшно")
+    elif rear == 2:
+        print("*На тебя упало дерево* U dead... ")
+        quit()
+    elif rear == 3:
+        print("Тебя схватил маньяк! чтобы вырваться напиши 'Удар'")
+        input()
+    elif rear == 4:
+        print("Ты нашел пещеру. Идти?")
+        l = input()
+        if l == "Да":
+            print("Тебя съели...")
+            quit()
+        elif l == "Нет" or "нет":
+            print("А там был выход! честно...")
+    elif rear == 5:
+        print("Вижу какую то яму,проверить?")
+        check = input()
+        if check == "Да":
+            print("Вы упали в яму и застряли вы прожили в яме дней :" )
+            print(time)
+            quit()
+        if check == "Нет":
+            print("Ты странный...")
+    elif rear == 6:
+        print("Вы выбежали из леса!!! ура")
+        quit()
+
+
+while True:
+    time = random.randint(1,7)
+    rear = random.randint(1,6)
+    choice = input('Идти(Да) или Нет?')
+    if choice == "Нет":
+        sleep()
+    elif choice == "Да":
+        go()
+
+class people: #New class people
+    def __init__ (self,name,age):
+        self.name = name
+        self.age = age
